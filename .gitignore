@@ -1,0 +1,18 @@
+build/
+.env
+android/local.properties
+android/.gradle/
+android/gradle-wrapper.jar
+android/gradlew
+android/gradlew.bat
+android/captures/
+android/key.properties
+**/*.keystore
+**/*.jks
+
+
+# Remember to never publicly share your keystore.
+# See https://flutter.dev/docs/deployment/android#reference-the-keystore-from-the-app
+key.properties
+**/*.keystore
+**/*.jks
