@@ -2,6 +2,7 @@
 
 import 'dart:convert';
 import 'dart:io';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'dart:typed_data';
 import 'dart:ui' as ui;
 import 'package:dotted_border/dotted_border.dart';
@@ -67,7 +68,7 @@ class _CloseRequestState extends State<CloseRequest> {
   }
 
   CameraPosition? defaultLocation;
-
+  String googleApiKey = dotenv.env['GOOGLE_MAPS_API_KEY']!;
   double? apiLatitude;
   double? apiLongitude;
   bool isLoading = false;
@@ -2398,7 +2399,7 @@ class _CloseRequestState extends State<CloseRequest> {
                 builder: (context) => Stack(
                   children: [
                     PlacePicker(
-                      apiKey: 'AIzaSyCWqJ7cq8ZoVTokiyTOVP8ndGF-umo6np4',
+                      apiKey: googleApiKey,
                       initialPosition: LatLng(
                         double.parse(widget.lat),
                         double.parse(widget.lng),

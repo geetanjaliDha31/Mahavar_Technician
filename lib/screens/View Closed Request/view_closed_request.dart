@@ -25,7 +25,6 @@ class _ViewClosedRequestState extends State<ViewClosedRequest> {
   int totalAmount = 0;
 
   bool loadingQuotation = true;
-
   List<Map<String, dynamic>> billData = [];
   Future<void> getData() async {
     GetUsedParts? res = await HttpApiCall().getUsedPartsDetails(
